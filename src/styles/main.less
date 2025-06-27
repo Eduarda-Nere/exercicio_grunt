@@ -1,0 +1,98 @@
+@primary-color: #5a4dbf;
+@bg-color: #f7f7f7;
+@btn-color: #7c6fc9;
+@btn-hover: #5a4dbf;
+@text-color: #333;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: @bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: @text-color;
+}
+
+.container {
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(90, 77, 191, 0.3);
+    text-align: center;
+    width: 320px;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+    color: @primary-color;
+    font-weight: 700;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: darken(@text-color, 10%);
+}
+
+button#roll {
+    background-color: @btn-color;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    padding: 12px 0;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(124, 111, 201, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+button#roll:hover,
+button#roll:focus {
+    background-color: @btn-hover;
+    outline: none;
+}
+
+#result {
+    margin-top: 1.8rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: @primary-color;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.dice-wrapper {
+    position: relative;
+    width: 200px;
+    height: auto;
+    margin: 0 0 20px;
+}
+
+.dice-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.result-text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7b61ff;
+    pointer-events: none;
+    user-select: none;
+}
